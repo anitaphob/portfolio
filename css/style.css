@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Roboto+Condensed|Encode+Sans+Expanded|Raleway|Oxygen');
+
+
+.logo {
+    margin: 0 auto;
+    width: 12%;
+
+}
+
+
+body {
+
+    font-family: 'Encode+Sans+Expanded', sans-serif;
+    font-size: 1em;
+    color: black;
+
+}
+
+main {
+    border-top-width: .2em;
+    font-size: 1rem;
+}
+
+
+#abimg {
+    width: 100%;
+}
+
+
+/* ----------------NAVIGATION ------------------ */
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    width: 100%;
+    font-size: 1.5em;
+    font-family: Raleway;
+}
+
+li {
+    text-align: center;
+    width: 100%
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu:hover:not(.active) {
+    background-color: #2C3F59;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+nav a {
+    color: gray;
+    text-decoration: none;
+    display: block;
+}
+
+nav a:link {
+    color: gray;
+}
+
+nav a:visited {
+    color: gray;
+}
+
+nav a:hover {
+    color: white;
+    transition: all 1s;
+}
+
+nav a:active {
+    color: white;
+}
+
+.title {
+    font-family: 'Anton', sans-serif;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+
+/* ----------------- GLOBAL ---------------------- */
+
+main {
+    display: grid;
+}
+
+header {
+    grid-area: hd;
+}
+
+nav {
+    grid-area: nav;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+footer {
+    grid-area: ft;
+    margin-top: 2em;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* ----------------- FRONTPAGE ------------------ */
+
+#main-index {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: "hd hd hd hd hd hd" "nav nav nav nav nav nav" "in-t in-t in-t in-t in-t in-t" "in-qt in-qt in-img in-img in-txt in-txt" "ft ft ft ft ft ft"
+}
+
+#index-title {
+    grid-area: in-t;
+}
+
+#index-quote {
+    grid-area: in-qt;
+    padding-top: 15%;
+    padding-left: 20%;
+    font-size: 4em;
+    color: #2C3F59;
+
+}
+
+#leftqt {
+    font-size: 0.5em;
+}
+
+#index-image {
+    grid-area: in-img;
+    padding: 10%
+}
+
+#index-image img {
+    width: 100%;
+}
+
+#index-text {
+    grid-area: in-txt;
+    padding-top: 45%;
+    font-size: 1.1em;
+
+}
+
+
+/* ----------------- ABOUT ------------------ */
+
+#main-about {
+    display: grid;
+    grid-template-columns: repeat (6, 1fr);
+    grid-template-areas: "hd hd hd hd hd hd" "nav nav nav nav nav nav" "ab-img ab-img ab-txt ab-txt ab-txt ab-txt" "ft ft ft ft ft ft"
+}
+
+.about {
+    grid-area: ab-img;
+    padding-top: 10%;
+    padding-left: 30%;
+}
+
+
+
+#about-text {
+    grid-area: ab-txt;
+    padding-top: 5%;
+
+}
+
+#topLeft{
+    text-align: right;
+    display: none;
+    margin-right: 23px;
+}
+
+#bottomLeft{
+    text-align: right;
+    display: none;
+    margin-right: 23px;
+}
+
+#topRight{
+    text-align: left;
+    display: none;
+    margin-left: 23px;
+}
+
+#bottomRight{
+    text-align: left;
+    display: none;
+    margin-left: 23px;
+}
+
+
+
+
+/* -------------- ASSIGNMENTS ------------ */
+
+#main-assign {
+    display: grid;
+    grid-template-columns: repeat (6, 1fr);
+    grid-template-areas: "hd hd hd hd hd hd" "nav nav nav nav nav nav" "frst-img frst-img frst-img sec-img sec-img sec-img" "ft ft ft ft ft ft"
+}
+
+#assign-img1 {
+    grid-area: frst-img;
+    margin-top: 50px;
+
+}
+
+#assign-img2 {
+    grid-area: sec-img;
+    margin-top: 50px;
+}
+
+.imgRight {
+    margin-top: 50px;
+    margin-left: 25px;
+    margin-bottom: 25px;
+    
+}
+
+.imgLeft {
+    margin-top: 50px;
+    margin-bottom: 25px;
+    margin-right: 25px;
+
+}
+
+*{
+    box-sizing: border-box;
+}
+
+
+/* --------- MOBILE ------------- */
+
+@media only screen and (max-width: 425px) {
+    body {}
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #main-index {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: "hd hd hd hd hd hd" "nav nav nav nav nav nav" "in-t in-t in-t in-t in-t in-t" "in-qt in-qt in-qt in-qt in-qt in-qt" "in-img in-img in-img  in-img in-img in-img" "in-txt in-txt in-txt in-txt in-txt in-txt" "ft ft ft ft ft ft"
+    }
+
+
+
+    #main-about {
+        display: grid;
+        grid-template-columns: repeat (6, 1fr);
+        grid-template-areas: "hd hd hd hd hd hd" "nav nav nav nav nav nav" "ab-img ab-img ab-img ab-img ab-img ab-img" "ab-txt ab-txt ab-txt ab-txt ab-txt ab-txt" "ft ft ft ft ft ft"
+    }
+    
+
+    #main-assign {
+        display: grid;
+        grid-template-columns: repeat (6, 1fr);
+        grid-template-areas: "hd hd hd hd hd hd" "nav nav nav nav nav nav" "frst-img frst-img frst-img frst-img frst-img frst-img" "sec-img sec-img sec-img sec-img sec-img sec-img" "ft ft ft ft ft ft"
+    }
+
+
+
+
+
+/* --------- DESKTOP & Tablet ------------- */
+
+@media only screen and (min-width: 426px) {
+    body {}
